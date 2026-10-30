@@ -6,7 +6,7 @@ An orchestrated, multi-agent voice AI command center built using **ElevenLabs Wo
 
 ## Live Demo
 
-* **Interactive Voice Agent:** [Talk to Project Nightingale Command Center](https://www.google.com/search?q=https://elevenlabs.io/app/talk-to%3Fagent_id%3Dagent_8201kjz2yt46fnaswggf4q30yxqm%26branch_id%3Dagtbrch_9401kjz2ytvffdn898a1f15nd5sx)
+* **Interactive Voice Agent:** [Talk to Project Nightingale Command Center](https://elevenlabs.io/app/agents/agents/agent_1701m49t7989etesbc6hak7ac19s/workflow?branchId=agtbrch_4001m49t7bp3fk1rma1vgppf7r7z)
 
 
 
