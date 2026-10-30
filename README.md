@@ -76,18 +76,9 @@ The workflow consists of **5 functional nodes** interconnected by **12 LLM-condi
 
 | Node Name | Node Type | Scoped Knowledge Base | Primary Function |
 | --- | --- | --- | --- |
-| **Greeter Node** | Subagent Node | *None (Zero KB)*
+| **Greeter Node** | Subagent Node | *None (Zero KB)*| Welcomes the caller, identifies intent, and hands off to specialists without answering directly.|
+| **Technical Readiness** | Subagent Node | `KB_Technical_Readiness.txt`<br> <br>`KB_Launch_Plan.txt`| Addresses sprint milestones, QA bugs, p99 API latency, rollback criteria, and on-call rotations. |
 
- | Welcomes the caller, identifies intent, and hands off to specialists without answering directly.
-
- |
-| **Technical Readiness** | Subagent Node | `KB_Technical_Readiness.txt`<br>
-
-<br>`KB_Launch_Plan.txt`
-
- | Addresses sprint milestones, QA bugs, p99 API latency, rollback criteria, and on-call rotations.
-
- |
 | **GTM & Marketing** | Subagent Node | `KB_GTM_Marketing.txt`<br>
 
 <br>`KB_Launch_Plan.txt`
