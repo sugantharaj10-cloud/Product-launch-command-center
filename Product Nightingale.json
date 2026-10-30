@@ -1,0 +1,992 @@
+{
+  "agent_id": "agent_1701m49t7989etesbc6hak7ac19s",
+  "name": "Project Nightingale Launch Center",
+  "conversation_config": {
+    "asr": {
+      "quality": "high",
+      "provider": "scribe_realtime",
+      "user_input_audio_format": "pcm_16000",
+      "keywords": [],
+      "keyterm_libraries": []
+    },
+    "turn": {
+      "turn_timeout": 7,
+      "initial_wait_time": null,
+      "silence_end_call_timeout": -1,
+      "mode": "turn",
+      "turn_eagerness": "normal",
+      "spelling_patience": "auto",
+      "speculative_turn": true,
+      "retranscribe_on_turn_timeout": false,
+      "turn_model": "turn_v3",
+      "interruption_ignore_terms": [],
+      "interruption_ignore_term_languages": [],
+      "merge_with_default_ignore_terms": false,
+      "transcribe_on_disabled_interruptions": false,
+      "soft_timeout_config": {
+        "timeout_seconds": -1,
+        "message": "Hhmmmm...yeah.",
+        "additional_soft_timeout_messages": [],
+        "use_llm_generated_message": false,
+        "randomize_fillers": false,
+        "max_soft_timeouts_per_generation": 1,
+        "llm_generated_message_prompt_override": null,
+        "disable_until_first_user_message": false
+      },
+      "noisy_environment_detection": false,
+      "noisy_environment_message": "Uhh ... sorry, I'm picking up some noise in the background. Could you move somewhere quieter?"
+    },
+    "tts": {
+      "model_id": "eleven_v4_turbo",
+      "voice_id": "cjVigY5qzO86Huf0OWal",
+      "supported_voices": [],
+      "expressive_mode": true,
+      "suggested_audio_tags": [],
+      "agent_output_audio_format": "pcm_16000",
+      "optimize_streaming_latency": 3,
+      "stability": 0.5,
+      "speed": 1,
+      "similarity_boost": 0.75,
+      "clone_strength": 0,
+      "text_normalisation_type": "system_prompt",
+      "pronunciation_dictionary_locators": [],
+      "enable_phoneme_tags": true,
+      "audio_effects": null
+    },
+    "conversation": {
+      "text_only": false,
+      "max_duration_seconds": 600,
+      "max_duration_seconds_after_last_agent_message": null,
+      "client_events": [
+        "audio",
+        "interruption",
+        "user_transcript",
+        "agent_response",
+        "agent_response_correction"
+      ],
+      "file_input": {
+        "enabled": true,
+        "max_files_in_memory": 10,
+        "max_files_per_conversation": 10
+      },
+      "monitoring_enabled": false,
+      "monitoring_events": [
+        "user_transcript",
+        "agent_response",
+        "agent_response_correction"
+      ],
+      "dtmf_input_settings": null,
+      "background_sound": {
+        "source_type": null,
+        "source_id": null,
+        "volume": 0.15,
+        "crossfade_loop": true
+      },
+      "compaction": {
+        "enabled": null,
+        "soft_trigger_fraction": null,
+        "tail_size": null,
+        "min_reclaimable_tokens": null
+      },
+      "source_attribution": true
+    },
+    "language_presets": {},
+    "vad": {
+      "background_voice_detection": false
+    },
+    "realtime_model": null,
+    "agent": {
+      "first_message": "Hi! Welcome to the Project Nightingale launch command center. I can help\nyou with technical readiness and engineering status, marketing and\ngo-to-market updates, or a high-level executive briefing. What are you\nlooking for today?\n\n",
+      "language": "en",
+      "hinglish_mode": false,
+      "dynamic_variables": {
+        "dynamic_variable_placeholders": {}
+      },
+      "disable_first_message_interruptions": false,
+      "max_conversation_duration_message": "",
+      "silence_end_call_message": "",
+      "text_behavior_overrides": {
+        "whatsapp": {
+          "verbosity": null,
+          "output_format": null,
+          "interaction_budget": null,
+          "disable_max_duration": true
+        }
+      },
+      "subagent_config": {
+        "agents": [],
+        "self_subagent": null
+      },
+      "prompt": {
+        "prompt": "## Global Context\nYou are the Project Nightingale Launch Command Center, a voice\nassistant that helps stakeholders get accurate, up-to-date\ninformation about the v3.0 mobile app launch (redesigned checkout\n+ Perks loyalty program). Launch date is April 15, 2026.\n\n\n## Global Rules\n- Answer ONLY from the knowledge base. Never speculate or make\n  up information.\n- Be concise. Lead with the most important fact first, then\n  offer to go deeper.\n- Use specific numbers, dates, and names from the documents.\n- If asked about something not in the knowledge base, say:\n  \"I don't have that in my current launch documents. I'd suggest\n  checking with the relevant lead directly.\"\n- After answering, ask: \"Anything else about the launch I can\n  help with?\"\n- Never volunteer budget figures unless explicitly asked.\n- Never discuss individual team member performance.\n- Keep a professional but approachable tone — you are a helpful\n  colleague, not a corporate robot.\n\n",
+        "llm": "gpt-4o",
+        "reasoning_effort": null,
+        "service_tier": "standard",
+        "opener": null,
+        "thinking_budget": null,
+        "enable_reasoning_summary": false,
+        "temperature": 0,
+        "max_tokens": -1,
+        "tool_ids": [],
+        "tool_ids_strict": false,
+        "built_in_tools": {
+          "transfer_to_agent": null,
+          "update_state": null,
+          "memory_entry_search": null,
+          "run_subagent": null,
+          "flag_issue_for_review": null,
+          "end_call": null,
+          "language_detection": null,
+          "transfer_to_number": null,
+          "skip_turn": null,
+          "play_keypad_touch_tone": null,
+          "voicemail_detection": null,
+          "identity_challenge": null,
+          "transfer_to_genesys": null,
+          "transfer_to_genesys_chat": null,
+          "transfer_to_genesys_bot": null
+        },
+        "rich_content": {
+          "enabled_components": []
+        },
+        "enable_parallel_tool_calls": true,
+        "mcp_server_ids": [],
+        "native_mcp_server_ids": [],
+        "knowledge_base": [],
+        "custom_llm": null,
+        "bedrock_llm": null,
+        "speech_engine": null,
+        "ignore_default_personality": true,
+        "rag": {
+          "enabled": false,
+          "embedding_model": "e5_mistral_7b_instruct",
+          "optional_rag_enabled": false,
+          "max_vector_distance": 0.6,
+          "max_documents_length": 50000,
+          "max_retrieved_rag_chunks_count": 20,
+          "num_candidates": null,
+          "query_rewrite_prompt_override": null,
+          "knowledge_base_tool_info": null,
+          "include_source_urls": false
+        },
+        "timezone": "America/Los_Angeles",
+        "backup_llm_config": {
+          "preference": "default"
+        },
+        "cascade_timeout_seconds": 4,
+        "tools": []
+      }
+    }
+  },
+  "metadata": {
+    "created_at_unix_secs": 1791330856,
+    "updated_at_unix_secs": 1793319786
+  },
+  "platform_settings": {
+    "evaluation": {
+      "criteria": []
+    },
+    "widget": {
+      "variant": "full",
+      "placement": "bottom-right",
+      "expandable": "never",
+      "avatar": {
+        "type": "orb",
+        "color_1": "#2792dc",
+        "color_2": "#9ce6e6"
+      },
+      "feedback_mode": "during",
+      "end_feedback": {
+        "type": "rating"
+      },
+      "bg_color": "#ffffff",
+      "text_color": "#000000",
+      "btn_color": "#000000",
+      "btn_text_color": "#ffffff",
+      "border_color": "#e1e1e1",
+      "focus_color": "#000000",
+      "border_radius": null,
+      "btn_radius": null,
+      "action_text": null,
+      "start_call_text": null,
+      "end_call_text": null,
+      "expand_text": null,
+      "listening_text": null,
+      "speaking_text": null,
+      "shareable_page_text": null,
+      "shareable_page_show_terms": true,
+      "terms_text": "#### Terms and conditions\n\nBy clicking \"Agree,\" and each time I interact with this AI agent, I consent to the recording, storage, and sharing of my communications with third-party service providers, and as described in the Privacy Policy.\nIf you do not wish to have your conversations recorded, please refrain from using this service.",
+      "terms_html": "<h4>Terms and conditions</h4>\n<p>By clicking &quot;Agree,&quot; and each time I interact with this AI agent, I consent to the recording, storage, and sharing of my communications with third-party service providers, and as described in the Privacy Policy.\nIf you do not wish to have your conversations recorded, please refrain from using this service.</p>\n",
+      "terms_key": null,
+      "show_avatar_when_collapsed": false,
+      "disable_banner": false,
+      "override_link": null,
+      "markdown_link_allowed_hosts": [],
+      "markdown_link_include_www": true,
+      "markdown_link_allow_http": true,
+      "mic_muting_enabled": true,
+      "transcript_enabled": true,
+      "text_input_enabled": true,
+      "conversation_mode_toggle_enabled": false,
+      "default_expanded": false,
+      "always_expanded": false,
+      "dismissible": false,
+      "show_agent_status": false,
+      "show_conversation_id": true,
+      "strip_audio_tags": true,
+      "syntax_highlight_theme": null,
+      "text_contents": {
+        "main_label": null,
+        "start_call": null,
+        "start_chat": null,
+        "new_call": null,
+        "end_call": null,
+        "mute_microphone": null,
+        "change_language": null,
+        "collapse": null,
+        "expand": null,
+        "copied": null,
+        "accept_terms": null,
+        "dismiss_terms": null,
+        "listening_status": null,
+        "speaking_status": null,
+        "connecting_status": null,
+        "chatting_status": null,
+        "queue_waiting_status": null,
+        "queue_waiting_status_short": null,
+        "input_label": null,
+        "input_placeholder": null,
+        "input_placeholder_text_only": null,
+        "input_placeholder_new_conversation": null,
+        "user_ended_conversation": null,
+        "agent_ended_conversation": null,
+        "conversation_id": null,
+        "error_occurred": null,
+        "queue_timed_out": null,
+        "copy_id": null,
+        "initiate_feedback": null,
+        "request_follow_up_feedback": null,
+        "thanks_for_feedback": null,
+        "thanks_for_feedback_details": null,
+        "follow_up_feedback_placeholder": null,
+        "submit": null,
+        "go_back": null,
+        "send_message": null,
+        "text_mode": null,
+        "voice_mode": null,
+        "switched_to_text_mode": null,
+        "switched_to_voice_mode": null,
+        "copy": null,
+        "download": null,
+        "wrap": null,
+        "agent_working": null,
+        "agent_done": null,
+        "agent_error": null,
+        "attach_file": null,
+        "remove_file": null,
+        "file_upload_error": null,
+        "file_type_unsupported": null,
+        "file_too_large": null,
+        "file_limit_reached": null,
+        "typing_indicator": null,
+        "rich_content_unavailable": null
+      },
+      "styles": {
+        "base": null,
+        "base_hover": null,
+        "base_active": null,
+        "base_border": null,
+        "base_subtle": null,
+        "base_primary": null,
+        "base_error": null,
+        "accent": null,
+        "accent_hover": null,
+        "accent_active": null,
+        "accent_border": null,
+        "accent_subtle": null,
+        "accent_primary": null,
+        "overlay_padding": null,
+        "button_radius": null,
+        "input_radius": null,
+        "bubble_radius": null,
+        "sheet_radius": null,
+        "compact_sheet_radius": null,
+        "dropdown_sheet_radius": null
+      },
+      "show_resize_button": true,
+      "end_confirmation_enabled": false,
+      "mobile_fullscreen": true,
+      "transcript_speech_sync_enabled": true,
+      "language_selector": false,
+      "supports_text_only": true,
+      "custom_avatar_path": null,
+      "language_presets": {},
+      "first_message_quick_replies": []
+    },
+    "data_collection": {},
+    "data_collection_scopes": {},
+    "analysis_items": {
+      "evaluation_criteria": [],
+      "data_collection": []
+    },
+    "overrides": {
+      "conversation_config_override": {
+        "asr": {
+          "keywords": false
+        },
+        "turn": {
+          "soft_timeout_config": {
+            "message": false,
+            "additional_soft_timeout_messages": false
+          },
+          "noisy_environment_message": false
+        },
+        "tts": {
+          "model_id": false,
+          "voice_id": false,
+          "supported_voices": false,
+          "stability": false,
+          "speed": false,
+          "similarity_boost": false,
+          "clone_strength": false,
+          "pronunciation_dictionary_locators": false
+        },
+        "conversation": {
+          "text_only": true,
+          "max_duration_seconds": false
+        },
+        "agent": {
+          "first_message": false,
+          "language": false,
+          "max_conversation_duration_message": false,
+          "silence_end_call_message": false,
+          "prompt": {
+            "prompt": false,
+            "llm": false,
+            "tool_ids": false,
+            "tool_ids_strict": false,
+            "native_mcp_server_ids": false,
+            "knowledge_base": false
+          }
+        }
+      },
+      "custom_llm_extra_body": false,
+      "enable_conversation_initiation_client_data_from_webhook": false,
+      "enable_starting_workflow_node_id_from_client": false,
+      "enable_procedure_ids_from_client": false
+    },
+    "workspace_overrides": {
+      "conversation_initiation_client_data_webhook": null,
+      "webhooks": {
+        "post_call_webhook_id": null,
+        "events": [
+          "transcript"
+        ],
+        "transcript_format": "json",
+        "exclude_transcript": false,
+        "send_audio": false
+      },
+      "cloud_storage_export": {
+        "destination_id": null,
+        "events": [
+          "transcript"
+        ],
+        "transcript_format": "json"
+      }
+    },
+    "testing": {
+      "attached_tests": [],
+      "referenced_tests_ids": []
+    },
+    "archived": false,
+    "guardrails": {
+      "version": "1",
+      "focus": {
+        "is_enabled": false
+      },
+      "prompt_injection": {
+        "is_enabled": false
+      },
+      "synthetic_voice": {
+        "is_enabled": false,
+        "trigger_action": {
+          "type": "end_call"
+        }
+      },
+      "content": {
+        "execution_mode": "streaming",
+        "config": {
+          "sexual": {
+            "is_enabled": false,
+            "threshold": "medium"
+          },
+          "violence": {
+            "is_enabled": false,
+            "threshold": "medium"
+          },
+          "harassment": {
+            "is_enabled": false,
+            "threshold": "medium"
+          },
+          "self_harm": {
+            "is_enabled": false,
+            "threshold": "medium"
+          },
+          "profanity": {
+            "is_enabled": false,
+            "threshold": "medium"
+          },
+          "religion_or_politics": {
+            "is_enabled": false,
+            "threshold": "medium"
+          },
+          "medical_and_legal_information": {
+            "is_enabled": false,
+            "threshold": "medium"
+          }
+        },
+        "trigger_action": {
+          "type": "end_call"
+        }
+      },
+      "moderation": null,
+      "custom": {
+        "config": {
+          "configs": []
+        }
+      }
+    },
+    "summary_language": null,
+    "summary_schedule": null,
+    "auto_translate_transcript_to_app_language": null,
+    "auth": {
+      "enable_auth": false,
+      "allowlist": [],
+      "require_origin_header": false,
+      "shareable_token": null
+    },
+    "call_limits": {
+      "agent_concurrency_limit": -1,
+      "daily_limit": 100000,
+      "bursting_enabled": true
+    },
+    "queueing_config": {
+      "enabled": true,
+      "wait_timeout_seconds": 180,
+      "hold_audio": null
+    },
+    "ban": null,
+    "smb_metadata": null,
+    "privacy": {
+      "record_voice": true,
+      "retention_days": -1,
+      "delete_transcript_and_pii": false,
+      "delete_audio": false,
+      "apply_to_existing_conversations": false,
+      "zero_retention_mode": false,
+      "encrypt_conversations": false,
+      "nested_history_redaction": false,
+      "conversation_history_redaction": {
+        "enabled": false,
+        "entities": [],
+        "excluded_data_collection_ids": []
+      },
+      "user_memory": {
+        "enabled": false,
+        "scale": "balanced",
+        "accept_unverified_identities": false
+      }
+    },
+    "trust_context": "unknown",
+    "analysis_llm": "gemini-2.5-flash",
+    "analysis_bedrock_llm": null,
+    "analysis_llm_billed": false,
+    "topic_discovery": {
+      "enabled": true
+    },
+    "sentiment_analysis": {
+      "enabled": true
+    },
+    "simulation_library": {
+      "enabled": false,
+      "test_ids": []
+    },
+    "alerting": null,
+    "overview_dashboard_template_id": null,
+    "safety": {
+      "is_blocked_ivc": false,
+      "is_blocked_non_ivc": false,
+      "ignore_safety_evaluation": false
+    }
+  },
+  "phone_numbers": [],
+  "whatsapp_accounts": [],
+  "workflow": {
+    "edges": {
+      "edge_01m49va8nsevea8j5v80vqnrd2": {
+        "source": "start_node",
+        "target": "node_01m49va8npem4tff2aw42h693k",
+        "forward_condition": {
+          "label": null,
+          "exit_slot": {
+            "type": "any"
+          },
+          "type": "unconditional"
+        },
+        "backward_condition": null
+      },
+      "edge_01m49vha3ve1qv9tpktnp57f72": {
+        "source": "node_01m49va8npem4tff2aw42h693k",
+        "target": "node_01m49vha3recdrsnwbwsr1kf7h",
+        "forward_condition": {
+          "label": null,
+          "exit_slot": {
+            "type": "any"
+          },
+          "type": "llm",
+          "condition": "The user is asking about engineering, technical readiness, QA,\ntesting, bugs, deployment, infrastructure, rollback, sprint\nprogress, architecture, API performance, or on-call rotation.\n\n"
+        },
+        "backward_condition": null
+      },
+      "edge_01m49vhf6jezprdrr6455v0hb9": {
+        "source": "node_01m49va8npem4tff2aw42h693k",
+        "target": "node_01m49vhf6heagvx2ajtc0vhmwf",
+        "forward_condition": {
+          "label": null,
+          "exit_slot": {
+            "type": "any"
+          },
+          "type": "llm",
+          "condition": "The user is asking about marketing, go-to-market, campaigns,\npress, PR, media, sales enablement, competitive landscape,\nmessaging, social media, email campaigns, or the referral\nprogram.\n\n"
+        },
+        "backward_condition": null
+      },
+      "edge_01m49vhq4kefptteb39enjemzd": {
+        "source": "node_01m49va8npem4tff2aw42h693k",
+        "target": "node_01m49vhq4he76b2nr5kc1f89rx",
+        "forward_condition": {
+          "label": null,
+          "exit_slot": {
+            "type": "any"
+          },
+          "type": "llm",
+          "condition": "The user wants a high-level summary, executive briefing,\noverall status, timeline overview, budget, risks, success\nmetrics, or general launch readiness.\n\n"
+        },
+        "backward_condition": null
+      },
+      "edge_01m49wsqgfec49w7042y7cdrjb": {
+        "source": "node_01m49vhf6heagvx2ajtc0vhmwf",
+        "target": "node_01m49wsqgbe6ztb05gwkkj0xfj",
+        "forward_condition": {
+          "label": null,
+          "exit_slot": {
+            "type": "any"
+          },
+          "type": "llm",
+          "condition": "The user has indicated they are done, said goodbye, thanked\nthe agent, or has no more questions.\n\n"
+        },
+        "backward_condition": null
+      },
+      "edge_01m49wthm2ew593tdbat9j12ce": {
+        "source": "node_01m49vha3recdrsnwbwsr1kf7h",
+        "target": "node_01m49wsqgbe6ztb05gwkkj0xfj",
+        "forward_condition": {
+          "label": null,
+          "exit_slot": {
+            "type": "any"
+          },
+          "type": "llm",
+          "condition": "The user has indicated they are done, said goodbye, thanked\nthe agent, or has no more questions.\n\n"
+        },
+        "backward_condition": null
+      },
+      "edge_01m49wtmvweer97bnk9hpcbwym": {
+        "source": "node_01m49vhq4he76b2nr5kc1f89rx",
+        "target": "node_01m49wsqgbe6ztb05gwkkj0xfj",
+        "forward_condition": {
+          "label": null,
+          "exit_slot": {
+            "type": "any"
+          },
+          "type": "llm",
+          "condition": "The user has indicated they are done, said goodbye, thanked\nthe agent, or has no more questions.\n\n"
+        },
+        "backward_condition": null
+      },
+      "edge_01m49xtvk8ee0s56rt4k89dtz8": {
+        "source": "node_01m49vha3recdrsnwbwsr1kf7h",
+        "target": "node_01m49vhf6heagvx2ajtc0vhmwf",
+        "forward_condition": {
+          "label": null,
+          "exit_slot": {
+            "type": "any"
+          },
+          "type": "llm",
+          "condition": "The user is now asking about marketing, go-to-market,\ncampaigns, press, PR, media, sales enablement, competitive\nlandscape, messaging, social media, email campaigns, or the\nreferral program instead of technical topics.\n\n"
+        },
+        "backward_condition": {
+          "label": null,
+          "exit_slot": {
+            "type": "any"
+          },
+          "type": "llm",
+          "condition": "The user is now asking about engineering, technical readiness,\nQA, testing, bugs, deployment, infrastructure, rollback,\nsprint progress, architecture, API performance, or on-call\nrotation instead of marketing topics.\n\n"
+        }
+      },
+      "edge_01m49xvhqhe84skjxk48qpqcgc": {
+        "source": "node_01m49vha3recdrsnwbwsr1kf7h",
+        "target": "node_01m49vhq4he76b2nr5kc1f89rx",
+        "forward_condition": {
+          "label": null,
+          "exit_slot": {
+            "type": "any"
+          },
+          "type": "llm",
+          "condition": "The user is now asking for a high-level summary, executive\nbriefing, overall status, timeline overview, budget, risks,\nsuccess metrics, or general launch readiness instead of\ntechnical details.\n\n"
+        },
+        "backward_condition": {
+          "label": null,
+          "exit_slot": {
+            "type": "any"
+          },
+          "type": "llm",
+          "condition": "The user wants to drill deeper into engineering, technical\nreadiness, QA, testing, bugs, deployment, infrastructure,\nrollback, sprint progress, architecture, API performance,\nor on-call rotation.\n\n"
+        }
+      },
+      "edge_01m49y1dzyesxrafc0rj2segs8": {
+        "source": "node_01m49vhf6heagvx2ajtc0vhmwf",
+        "target": "node_01m49vhq4he76b2nr5kc1f89rx",
+        "forward_condition": {
+          "label": null,
+          "exit_slot": {
+            "type": "any"
+          },
+          "type": "llm",
+          "condition": "The user is now asking for a high-level summary, executive\nbriefing, overall status, timeline overview, budget, risks,\nsuccess metrics, or general launch readiness instead of\nmarketing details.\n\n"
+        },
+        "backward_condition": {
+          "label": null,
+          "exit_slot": {
+            "type": "any"
+          },
+          "type": "llm",
+          "condition": "The user wants to drill deeper into marketing, go-to-market,\ncampaigns, press, PR, media, sales enablement, competitive\nlandscape, messaging, social media, email campaigns, or the\nreferral program.\n\n"
+        }
+      }
+    },
+    "nodes": {
+      "start_node": {
+        "type": "start",
+        "position": {
+          "x": 324,
+          "y": -242
+        },
+        "edge_order": [
+          "edge_01m49va8nsevea8j5v80vqnrd2"
+        ],
+        "parent_subgraph_id": null
+      },
+      "node_01m49va8npem4tff2aw42h693k": {
+        "type": "override_agent",
+        "position": {
+          "x": 332,
+          "y": -106.5
+        },
+        "edge_order": [
+          "edge_01m49vha3ve1qv9tpktnp57f72",
+          "edge_01m49vhf6jezprdrr6455v0hb9",
+          "edge_01m49vhq4kefptteb39enjemzd"
+        ],
+        "parent_subgraph_id": null,
+        "conversation_config": {
+          "turn": {
+            "turn_eagerness": null,
+            "spelling_patience": null,
+            "speculative_turn": null,
+            "retranscribe_on_turn_timeout": null
+          },
+          "tts": {
+            "voice_id": null
+          },
+          "conversation": {
+            "client_events": null
+          },
+          "agent": {
+            "prompt": {
+              "prompt": null,
+              "llm": null,
+              "built_in_tools": {}
+            }
+          }
+        },
+        "additional_prompt": "You are the initial greeter for the launch command center. Your\nONLY job is to understand what the caller needs and route them\nto the right specialist.\n\n\nListen to what the caller asks. DO NOT try to answer their\nquestion yourself. Instead, acknowledge their question briefly\nand let the system route them.\n\n\nExamples:\n- If they say \"How's engineering doing?\" or \"Are we ready for\n  launch technically?\" → This is a technical readiness question.\n- If they say \"What's the marketing plan?\" or \"How are we\n  handling press?\" → This is a GTM/marketing question.\n- If they say \"Give me the executive summary\" or \"What are the\n  top risks?\" or \"Are we on track?\" → This is an executive\n  briefing question.\n- If they say something vague like \"Give me an update,\" ask:\n  \"Sure! Would you like a quick executive summary, a technical\n  readiness update, or a marketing and GTM update?\"\n\n",
+        "additional_knowledge_base": [],
+        "additional_tool_ids": [],
+        "label": "Greeter",
+        "entry_behavior": "auto",
+        "forced_tool_name": null
+      },
+      "node_01m49vha3recdrsnwbwsr1kf7h": {
+        "type": "override_agent",
+        "position": {
+          "x": -7.125,
+          "y": 201.5
+        },
+        "edge_order": [
+          "edge_01m49wthm2ew593tdbat9j12ce",
+          "edge_01m49xtvk8ee0s56rt4k89dtz8",
+          "edge_01m49xvhqhe84skjxk48qpqcgc"
+        ],
+        "parent_subgraph_id": null,
+        "conversation_config": {
+          "turn": {
+            "turn_eagerness": null,
+            "spelling_patience": null,
+            "speculative_turn": null,
+            "retranscribe_on_turn_timeout": null
+          },
+          "tts": {
+            "voice_id": null
+          },
+          "conversation": {
+            "client_events": null
+          },
+          "agent": {
+            "prompt": {
+              "prompt": null,
+              "llm": null,
+              "built_in_tools": {}
+            }
+          }
+        },
+        "additional_prompt": "You are now the Technical Readiness Specialist for Project\nNightingale.\n\n\n## Your Expertise\nYou answer questions about: engineering sprint progress, QA\nstatus, bug counts, architecture, API performance, deployment\nplan, staged rollout schedule, rollback criteria, team\nallocation, on-call rotation, and technical dependencies.\n\n\n## How to Answer\n- Lead with status (on track / at risk / blocked), then give\n  specifics.\n- Use exact numbers: sprint X of Y, X bugs open, p99 latency\n  = Xms.\n- For deployment questions, always mention the staged rollout\n  percentages and dates.\n- For risk questions, always mention the automated rollback\n  criteria.\n\n\n## Boundaries\n- Do NOT answer marketing, sales, or budget questions. Say:\n  \"That's outside my area — I can help with technical\n  readiness. For marketing questions, you might want to ask\n  about the GTM track instead.\"\n- Do NOT share team member personal information beyond their\n  role and current task.\n\n",
+        "additional_knowledge_base": [
+          {
+            "type": "file",
+            "name": "KB_Launch_Plan.txt",
+            "id": "u5gxtl7dkPSFIQO5bkxQ",
+            "usage_mode": "auto"
+          },
+          {
+            "type": "file",
+            "name": "KB_Technical_Readiness.txt",
+            "id": "nGEvL39kVamzTGwDKUvW",
+            "usage_mode": "auto"
+          }
+        ],
+        "additional_tool_ids": [],
+        "label": "Technical Readiness Subagent ",
+        "entry_behavior": "auto",
+        "forced_tool_name": null
+      },
+      "node_01m49vhf6heagvx2ajtc0vhmwf": {
+        "type": "override_agent",
+        "position": {
+          "x": 339,
+          "y": 589.5
+        },
+        "edge_order": [
+          "edge_01m49wsqgfec49w7042y7cdrjb",
+          "edge_01m49xtvk8ee0s56rt4k89dtz8",
+          "edge_01m49y1dzyesxrafc0rj2segs8"
+        ],
+        "parent_subgraph_id": null,
+        "conversation_config": {
+          "turn": {
+            "turn_eagerness": null,
+            "spelling_patience": null,
+            "speculative_turn": null,
+            "retranscribe_on_turn_timeout": null
+          },
+          "tts": {
+            "voice_id": null
+          },
+          "conversation": {
+            "client_events": null
+          },
+          "agent": {
+            "prompt": {
+              "prompt": null,
+              "llm": null,
+              "built_in_tools": {}
+            }
+          }
+        },
+        "additional_prompt": "You are the Go-To-Market and Marketing Specialist for Project\nNightingale.\n\n\n## Your Expertise\nYou answer questions about: marketing campaigns, channel strategy\n(email, paid social, PR, organic social), messaging and talking\npoints, competitive landscape, sales enablement, press timeline,\nreferral program, and marketing success metrics.\n\n\n## How to Answer\n- For campaign questions, give the channel, timing, and budget\n  breakdown.\n- For messaging questions, use the exact approved talking points\n  from the playbook.\n- For competitive questions, reference specific competitor\n  comparisons and our advantages.\n- For sales enablement, provide the talking points and objection\n  handling guidance.\n\n\n## Boundaries\n- Do NOT answer engineering, QA, or infrastructure questions.\n  Say: \"That's in the technical readiness track — I focus on\n  marketing and GTM.\"\n- Do NOT share the full marketing budget breakdown unless\n  directly asked. If asked, give it.\n- ALWAYS use the approved messaging. Never ad-lib marketing\n  claims.\n- Remember the messaging DON'Ts: no revenue projections, no\n  competitor names in marketing materials, no unqualified\n  \"fastest\" claims.\n\n",
+        "additional_knowledge_base": [
+          {
+            "type": "file",
+            "name": "KB_GTM_Marketing.txt",
+            "id": "kZT0hfUwB7xD8k4Yv4fI",
+            "usage_mode": "auto"
+          },
+          {
+            "type": "file",
+            "name": "KB_GTM_Marketing.txt",
+            "id": "hILuusv2HizgZLBaADty",
+            "usage_mode": "auto"
+          }
+        ],
+        "additional_tool_ids": [],
+        "label": "GTM & Marketing Subagent ",
+        "entry_behavior": "auto",
+        "forced_tool_name": null
+      },
+      "node_01m49vhq4he76b2nr5kc1f89rx": {
+        "type": "override_agent",
+        "position": {
+          "x": 745,
+          "y": 199.5
+        },
+        "edge_order": [
+          "edge_01m49wtmvweer97bnk9hpcbwym",
+          "edge_01m49xvhqhe84skjxk48qpqcgc",
+          "edge_01m49y1dzyesxrafc0rj2segs8"
+        ],
+        "parent_subgraph_id": null,
+        "conversation_config": {
+          "turn": {
+            "turn_eagerness": null,
+            "spelling_patience": null,
+            "speculative_turn": null,
+            "retranscribe_on_turn_timeout": null
+          },
+          "tts": {
+            "voice_id": null
+          },
+          "conversation": {
+            "client_events": null
+          },
+          "agent": {
+            "prompt": {
+              "prompt": null,
+              "llm": null,
+              "built_in_tools": {}
+            }
+          }
+        },
+        "additional_prompt": "You are the Executive Briefing Specialist for Project\nNightingale.\n\n\n## Your Expertise\nYou give high-level status updates, risk summaries, timeline\noverviews, budget status, success metrics, and strategic-level\nanswers. Your audience is typically VPs, directors, or senior\nstakeholders who want the big picture, not the technical details.\n\n\n## How to Answer\n- Default to the shortest useful answer. Executives value\n  brevity.\n- Structure your responses as: Overall Status → Key Highlight\n  → Top Risk → Next Milestone.\n- For a quick summary, aim for 4-5 sentences maximum.\n- For a detailed briefing, cover: launch readiness, feature\n  highlights, risk register, budget status, success metrics,\n  and post-launch plan.\n- Use specific dates and numbers but skip technical jargon\n  (no \"p99 latency\" — say \"our systems are performing well\n  within targets\" instead).\n\n\n## Boundaries\n- You CAN share budget information if asked (executives need\n  this).\n- Translate technical details into business impact: \"Engineering\n  is 90% complete and on track\" rather than \"Sprint 9 of 11,\n  847 of 1400 test cases executed.\"\n- If they drill into deep technical or marketing details, offer\n  to route them: \"For the full technical breakdown, I'd\n  recommend asking about the technical readiness track.\"\n\n",
+        "additional_knowledge_base": [
+          {
+            "type": "file",
+            "name": "KB_Technical_Readiness.txt",
+            "id": "nGEvL39kVamzTGwDKUvW",
+            "usage_mode": "auto"
+          },
+          {
+            "type": "file",
+            "name": "KB_GTM_Marketing.txt",
+            "id": "kZT0hfUwB7xD8k4Yv4fI",
+            "usage_mode": "auto"
+          },
+          {
+            "type": "file",
+            "name": "KB_Launch_Plan.txt",
+            "id": "u5gxtl7dkPSFIQO5bkxQ",
+            "usage_mode": "auto"
+          }
+        ],
+        "additional_tool_ids": [],
+        "label": "Executive Briefing Subagent",
+        "entry_behavior": "auto",
+        "forced_tool_name": null
+      },
+      "node_01m49wsqgbe6ztb05gwkkj0xfj": {
+        "type": "end",
+        "position": {
+          "x": 352.625,
+          "y": 1253.125
+        },
+        "edge_order": [],
+        "parent_subgraph_id": null,
+        "return_when_nested": true,
+        "outcome": "success",
+        "exit_slot": null
+      }
+    },
+    "subgraphs": {},
+    "prevent_subagent_loops": false
+  },
+  "access_info": {
+    "is_creator": true,
+    "creator_name": "Sugantha Raj",
+    "creator_email": "sugantharaj10@gmail.com",
+    "role": "admin",
+    "anonymous_access_level_override": null,
+    "access_source": "creator"
+  },
+  "access_permissions": [
+    "agent_archive",
+    "agent_duplicate",
+    "agent_edit_advanced_settings",
+    "agent_edit_config",
+    "agent_edit_conversation_metadata",
+    "agent_edit_guardrails",
+    "agent_edit_llm",
+    "agent_edit_memories",
+    "agent_edit_metadata",
+    "agent_edit_procedures",
+    "agent_edit_prompt",
+    "agent_edit_task_config",
+    "agent_edit_voice",
+    "agent_edit_widget",
+    "agent_edit_workflow",
+    "agent_manage_analysis",
+    "agent_manage_attached_knowledge_base",
+    "agent_manage_attached_mcp_servers",
+    "agent_manage_attached_pronunciation_dictionaries",
+    "agent_manage_attached_tests",
+    "agent_manage_attached_tools",
+    "agent_manage_batch_calling",
+    "agent_manage_branches",
+    "agent_manage_channels",
+    "agent_manage_experiments",
+    "agent_manage_phone_numbers",
+    "agent_manage_protected_branches",
+    "agent_manage_traffic",
+    "agent_manage_whatsapp",
+    "agent_merge_branches",
+    "agent_monitor_conversation",
+    "agent_publish_version",
+    "agent_rerun_conversation_analysis",
+    "agent_run_tasks",
+    "agent_run_tests",
+    "agent_search_conversation_history",
+    "agent_view_advanced_settings",
+    "agent_view_analysis",
+    "agent_view_analytics",
+    "agent_view_batch_calling",
+    "agent_view_channels",
+    "agent_view_config",
+    "agent_view_conversation_by_id",
+    "agent_view_costs",
+    "agent_view_experiments",
+    "agent_view_guardrails",
+    "agent_view_knowledge_base",
+    "agent_view_llm",
+    "agent_view_mcp_servers",
+    "agent_view_memories",
+    "agent_view_metadata",
+    "agent_view_phone_numbers",
+    "agent_view_procedures",
+    "agent_view_prompt",
+    "agent_view_pronunciation_dictionaries",
+    "agent_view_tasks",
+    "agent_view_tests",
+    "agent_view_tools",
+    "agent_view_version_history",
+    "agent_view_voice",
+    "agent_view_whatsapp",
+    "agent_view_widget",
+    "agent_view_workflow",
+    "resource_delete",
+    "resource_manage_access"
+  ],
+  "tags": [],
+  "version_id": "agtvrsn_7401m6530nr6erv8y9rk8dx98bdb",
+  "branch_id": "agtbrch_4001m49t7bp3fk1rma1vgppf7r7z",
+  "main_branch_id": "agtbrch_4001m49t7bp3fk1rma1vgppf7r7z",
+  "procedures": {},
+  "trust_context": "unknown",
+  "default_hold_audio_url": "https://eleven-public-cdn-common.elevenlabs.io/convai/ambient-audio-assets/elevator1.mp3"
+}
