@@ -1,145 +1,15 @@
-Hi! Welcome to the Project Nightingale launch command center. I can help you with technical readiness and engineering status, marketing and go-to-market updates, or a high-level executive briefing. What are you looking for today?
+<details>
+<summary><b>View Sample Call Transcript</b></summary>
 
-0:00
-TTS 74 ms
-Analyze
-Report audio issue
-Flag issue
-Create test
-User
+**Greeter Node:** "Hi! Welcome to the Project Nightingale launch command center. I can help you with technical readiness and engineering status, marketing and go-to-market updates, or a high-level executive briefing. What are you looking for today?"
+**Greeter Node:** "Are you still there? Let me know how I can assist you with the Project Nightingale launch."
 
-...
+**Caller:** "Are we going to be ready for launch from engineering perspective?"
+**Technical Readiness:** "Yes, from an engineering perspective, we are on track for the launch. We are currently in sprint nine of eleven, with key features like the checkout redesign and loyalty points earning engine already completed. The final QA regression suite is in progress, and we are addressing a few remaining bugs. The staged rollout is planned to begin on April fifteenth, with a full rollout by April twenty-fifth. Anything else about the launch I can help with?"
+**Technical Readiness:** "Is there anything else you'd like to know about the technical readiness for the launch? I'm here to help!"
+**Caller:**  "What's our marketing plan for the launch week?"
+**GTM & Marketing:** "During the launch week, our marketing plan includes several key activities. On April fifteenth, we'll send out a launch day email to all users, featuring an animated GIF of the new one-tap checkout and a call to action to update the app. We'll also have paid social media campaigns running on Instagram, TikTok, and YouTube, targeting existing app users and lookalike audiences. Additionally, coordinated press reviews will go live, with an exclusive feature on TechCrunch. Anything else about the launch I can help with?"
+**GTM & Marketing:** "If you have any more questions or need further details about the launch, feel free to ask!"
+**Caller:** "Okay."
 
-0:20
-Report audio issue
-Create test
-
-AgentGreeter
-
-Are you still there? Let me know how I can assist you with the Project Nightingale launch.
-
-0:22
-LLM 563 ms
-TTS 1.3 s
-Analyze
-Report audio issue
-Flag issue
-Create test
-User
-
-...
-
-0:33
-Report audio issue
-Create test
-
-AgentGreeter
-
-Just checking in to see if you're still with me. Feel free to let me know what you need help with regarding the launch!
-
-0:34
-LLM 494 ms
-TTS 92 ms
-Analyze
-Report audio issue
-Flag issue
-Create test
-User
-
-Are we going to be ready for launch from engineering perspective?
-
-0:47
-ASR 32 ms
-
-+0.00
-Report audio issue
-Create test
- Transitioned to Project Nightingale Launch CenterTechnical Readiness Subagent 
-
-Expand
-
-
-AgentTechnical Readiness Subagent
-
-Yes, from an engineering perspective, we are on track for the launch. We are currently in sprint nine of eleven, with key features like the checkout redesign and loyalty points earning engine already completed. The final QA regression suite is in progress, and we are addressing a few remaining bugs. The staged rollout is planned to begin on April fifteenth, with a full rollout by April twenty-fifth. Anything else about the launch I can help with?
-
-0:53
-LLM 801 ms
-TTS 68 ms
-1 source
-Analyze
-Report audio issue
-Flag issue
-Create test
-User
-
-...
-
-1:26
-ASR 24 ms
-Report audio issue
-Create test
-
-AgentTechnical Readiness Subagent
-
-Is there anything else you'd like to know about the technical readiness for the launch? I'm here to help!
-
-1:27
-LLM 678 ms
-TTS 82 ms
-Analyze
-Report audio issue
-Flag issue
-Create test
-User
-
-What's our marketing plan for the launch week?
-
-1:37
-ASR 17 ms
-
-+0.00
-Report audio issue
-Create test
- Transitioned to Project Nightingale Launch CenterGTM & Marketing Subagent 
-
-Expand
-
-
-AgentGTM & Marketing Subagent
-
-During the launch week, our marketing plan includes several key activities. On April fifteenth, we'll send out a launch day email to all users, featuring an animated GIF of the new one-tap checkout and a call to action to update the app. We'll also have paid social media campaigns running on Instagram, TikTok, and YouTube, targeting existing app users and lookalike audiences. Additionally, coordinated press reviews will go live, with an exclusive feature on TechCrunch. Anything else about the launch I can help with?
-
-1:41
-LLM 662 ms
-TTS 70 ms
-Analyze
-Report audio issue
-Flag issue
-Create test
-User
-
-...
-
-2:19
-ASR 57 ms
-Report audio issue
-Create test
-
-AgentGTM & Marketing Subagent
-
-If you have any more questions or need further details about the launch, feel free to ask!
-
-2:20
-LLM 599 ms
-TTS 87 ms
-Analyze
-Report audio issue
-Flag issue
-Create test
-User
-
-Okay.
-
-2:26
-ASR 19 ms
+</details>
