@@ -1,7 +1,5 @@
 # Product Launch Command Center (Voice AI System)
 
-# Product Launch Command Center (Voice AI System)
-
 An orchestrated, multi-agent voice AI command center built using **ElevenLabs Workflow Builder** and **Gemini Flash LLMs**. The system acts as an autonomous switchboard for cross-functional launch operations during the **Project Nightingale** product release (Mobile App v3.0), automatically triaging stakeholder voice calls and routing them to specialized agents for technical readiness, go-to-market execution, or executive briefings.
 
 ---
@@ -43,24 +41,12 @@ The **Product Launch Command Center** resolves this through modular multi-agent 
 
  |
 | --- | --- |
-| **Product** | Mobile App v3.0 — Redesigned Checkout & Perks Loyalty Program
-
- |
-| **Launch Date** | April 15, 2026 (Staged Rollout: 5% → 25% → 50% → 100%)
-
- |
-| **Current Progress** | Sprint 9 of 11 (Overall Status: On Track; Yellow flag on App Store review)
-
- |
-| **Resource Allocation** | 6 Engineers, 2 Designers, 1 QA, plus Marketing and Sales Leads
-
- |
-| **Budget Standing** | $220,000 Total Budget ($210,000 Projected Spend — Under Budget)
-
- |
-| **Key Stakeholders** | Diana Walsh (VP Product), Sam Torres (PM), Rachel Nguyen (TPM), Kai Matsumoto (Eng Lead)
-
- |
+| **Product** | Mobile App v3.0 — Redesigned Checkout & Perks Loyalty Program |
+| **Launch Date** | April 15, 2026 (Staged Rollout: 5% → 25% → 50% → 100%) |
+| **Current Progress** | Sprint 9 of 11 (Overall Status: On Track; Yellow flag on App Store review) |
+| **Resource Allocation** | 6 Engineers, 2 Designers, 1 QA, plus Marketing and Sales Leads |
+| **Budget Standing** | $220,000 Total Budget ($210,000 Projected Spend — Under Budget) |
+| **Key Stakeholders** | Diana Walsh (VP Product), Sam Torres (PM), Rachel Nguyen (TPM), Kai Matsumoto (Eng Lead) |
 
 ---
 
