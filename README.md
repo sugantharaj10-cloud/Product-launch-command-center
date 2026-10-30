@@ -37,9 +37,7 @@ The **Product Launch Command Center** resolves this through modular multi-agent 
 
 ## Launch Context: Project Nightingale
 
-| Parameter | Launch Detail
-
- |
+| Parameter | Launch Detail |
 | --- | --- |
 | **Product** | Mobile App v3.0 — Redesigned Checkout & Perks Loyalty Program |
 | **Launch Date** | April 15, 2026 (Staged Rollout: 5% → 25% → 50% → 100%) |
